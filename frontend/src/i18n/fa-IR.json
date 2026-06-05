@@ -1,0 +1,87 @@
+{
+  "common": {
+    "appName": "مدیریت کلینیک",
+    "welcome": "خوش آمدید",
+    "loading": "در حال بارگذاری...",
+    "error": "خطا",
+    "success": "موفق",
+    "save": "ذخیره",
+    "cancel": "انصراف",
+    "delete": "حذف",
+    "edit": "ویرایش",
+    "view": "نمایش",
+    "back": "بازگشت",
+    "search": "جستجو",
+    "logout": "خروج",
+    "home": "خانه",
+    "settings": "تنظیمات"
+  },
+  "dashboard": {
+    "title": "داشبورد",
+    "welcome_greeting": "سلام {name}",
+    "welcome_subtitle": "خوش آمدید به مدیریت کلینیک درمانی",
+    "today": "امروز",
+    "appointments": "قرارملاقات‌ها",
+    "patients": "بیماران",
+    "doctors": "پزشکان",
+    "staff": "کادر پزشکی",
+    "appointments_today": "قرارملاقات امروز",
+    "upcoming_appointments": "قرارملاقات‌های پیش رو",
+    "recent_patients": "بیماران اخیر",
+    "clinic_statistics": "آمار کلینیک",
+    "total_patients": "کل بیماران",
+    "total_appointments": "کل قرارملاقات‌ها",
+    "today_appointments": "قرارملاقات‌های امروز",
+    "pending_visits": "ویزیت‌های در انتظار"
+  },
+  "roles": {
+    "doctor": "پزشک",
+    "manager": "مدیر",
+    "receptionist": "پذیرش",
+    "staff": "کادر",
+    "admin": "مدیر سیستم"
+  },
+  "appointments": {
+    "title": "قرارملاقات‌ها",
+    "new_appointment": "قرارملاقات جدید",
+    "appointment_time": "ساعت قرارملاقات",
+    "appointment_date": "تاریخ قرارملاقات",
+    "doctor": "پزشک",
+    "patient": "بیمار",
+    "status": "وضعیت",
+    "completed": "انجام شده",
+    "pending": "در انتظار",
+    "cancelled": "لغو شده",
+    "confirmed": "تایید شده",
+    "reschedule": "تغییر زمان",
+    "notes": "یادداشت‌ها"
+  },
+  "patients": {
+    "title": "بیماران",
+    "new_patient": "بیمار جدید",
+    "patient_info": "اطلاعات بیمار",
+    "national_id": "کد ملی",
+    "phone": "تلفن",
+    "email": "ایمیل",
+    "address": "نشانی",
+    "age": "سن",
+    "gender": "جنسیت",
+    "medical_history": "سابقه پزشکی",
+    "male": "مرد",
+    "female": "زن"
+  },
+  "holidays": {
+    "title": "تعطیلات",
+    "friday": "جمعه",
+    "public_holidays": "تعطیلات رسمی",
+    "persian_new_year": "عید نوروز",
+    "no_clinic_today": "کلینیک امروز تعطیل است"
+  },
+  "validation": {
+    "required_field": "این فیلد الزامی است",
+    "invalid_phone": "شماره تلفن نامعتبر است",
+    "invalid_email": "ایمیل نامعتبر است",
+    "invalid_national_id": "کد ملی نامعتبر است",
+    "password_too_short": "رمز عبور باید حداقل ۸ کاراکتر باشد"
+  }
+}
