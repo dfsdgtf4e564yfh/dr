@@ -17,7 +17,8 @@ interface DashboardProps {
 const Dashboard: React.FC<DashboardProps> = ({ userName, userRole }) => {
   const today = useMemo(() => new Date(), []);
   const persianDateFull = useMemo(() => formatPersianDateWithDayName(today), [today]);
-  const [jy, jm, jd] = useMemo(() => getPersianToday(), []);
+  const persianToday = useMemo(() => getPersianToday(), []);
+  const [jy, jm, jd] = persianToday;
 
   // بررسی تعطیل
   const holidayInfo = useMemo(() => {
@@ -102,7 +103,7 @@ const Dashboard: React.FC<DashboardProps> = ({ userName, userRole }) => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-surface-50 to-slate-100 rtl">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-surface-50 to-slate-100">
       {/* هدر خوش‌آمدگویی */}
       <motion.div
         initial={{ opacity: 0, y: -20 }}
@@ -112,8 +113,8 @@ const Dashboard: React.FC<DashboardProps> = ({ userName, userRole }) => {
       >
         {/* پس‌زمینه تزئینی - الهام‌گرفته از هندسه ایرانی */}
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 left-0 w-96 h-96 bg-white rounded-full blur-3xl" />
-          <div className="absolute bottom-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl" />
+          <div className="absolute top-0 right-0 w-96 h-96 bg-white rounded-full blur-3xl" />
+          <div className="absolute bottom-0 left-0 w-96 h-96 bg-white rounded-full blur-3xl" />
         </div>
 
         <div className="relative z-10 max-w-6xl mx-auto">
@@ -144,7 +145,7 @@ const Dashboard: React.FC<DashboardProps> = ({ userName, userRole }) => {
             {/* قسمت Avatar */}
             <motion.div
               variants={itemVariants}
-              className="flex justify-center md:justify-end"
+              className="flex justify-center md:justify-start"
             >
               <div className="relative">
                 <div className="absolute inset-0 bg-white opacity-20 rounded-full blur-2xl scale-150" />
