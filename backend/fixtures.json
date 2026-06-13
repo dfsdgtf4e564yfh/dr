@@ -1,0 +1,224 @@
+[
+  {
+    "model": "accounts.user",
+    "pk": 1,
+    "fields": {
+      "username": "admin",
+      "password": "pbkdf2_sha256$870000$rfqjdSkypYh3TfFGiKMWfK$N5KQkhPmhHDw3KGVVKbHq48/SmJLqG4W4VnCQmLnJSQ=",
+      "first_name": "مدیر",
+      "last_name": "سیستم",
+      "email": "admin@clinic.com",
+      "phone": "09120000000",
+      "role": "admin",
+      "is_active": true,
+      "is_staff": true,
+      "is_superuser": true,
+      "commission_percentage": "0.00",
+      "date_joined": "2025-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "accounts.user",
+    "pk": 2,
+    "fields": {
+      "username": "reception",
+      "password": "pbkdf2_sha256$870000$rfqjdSkypYh3TfFGiKMWfK$N5KQkhPmhHDw3KGVVKbHq48/SmJLqG4W4VnCQmLnJSQ=",
+      "first_name": "کاربر",
+      "last_name": "پذیرش",
+      "email": "reception@clinic.com",
+      "phone": "09120000001",
+      "role": "reception",
+      "is_active": true,
+      "is_staff": false,
+      "is_superuser": false,
+      "commission_percentage": "0.00",
+      "date_joined": "2025-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "accounts.user",
+    "pk": 3,
+    "fields": {
+      "username": "doctor1",
+      "password": "pbkdf2_sha256$870000$rfqjdSkypYh3TfFGiKMWfK$N5KQkhPmhHDw3KGVVKbHq48/SmJLqG4W4VnCQmLnJSQ=",
+      "first_name": "محمد",
+      "last_name": "طاهری",
+      "email": "dr.taheri@clinic.com",
+      "phone": "09120000002",
+      "role": "doctor",
+      "is_active": true,
+      "is_staff": false,
+      "is_superuser": false,
+      "commission_percentage": "60.00",
+      "date_joined": "2025-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "accounts.treatmenttype",
+    "pk": 1,
+    "fields": {
+      "name": "TMS / rTMS",
+      "description": "تحریک مغناطیسی فراجمجمه‌ای"
+    }
+  },
+  {
+    "model": "accounts.treatmenttype",
+    "pk": 2,
+    "fields": {
+      "name": "QEEG",
+      "description": "نقشه‌برداری کمی از امواج مغزی"
+    }
+  },
+  {
+    "model": "accounts.treatmenttype",
+    "pk": 3,
+    "fields": {
+      "name": "tDCS",
+      "description": "تحریک الکتریکی فراجمجمه‌ای"
+    }
+  },
+  {
+    "model": "accounts.treatmenttype",
+    "pk": 4,
+    "fields": {
+      "name": "لیزر",
+      "description": "تحریک نوری فراجمجمه‌ای"
+    }
+  },
+  {
+    "model": "accounts.treatmenttype",
+    "pk": 5,
+    "fields": {
+      "name": "لورتا",
+      "description": "لورتا نورفیدبک"
+    }
+  },
+  {
+    "model": "accounts.treatmenttype",
+    "pk": 6,
+    "fields": {
+      "name": "مشاور",
+      "description": "مشاوره تخصصی"
+    }
+  },
+  {
+    "model": "accounts.treatmenttype",
+    "pk": 7,
+    "fields": {
+      "name": "ویزیت",
+      "description": ""
+    }
+  },
+  {
+    "model": "accounts.treatmenttype",
+    "pk": 8,
+    "fields": {
+      "name": "مشاوره",
+      "description": ""
+    }
+  },
+  {
+    "model": "accounts.treatmenttype",
+    "pk": 9,
+    "fields": {
+      "name": "نوروفیدبک",
+      "description": ""
+    }
+  },
+  {
+    "model": "accounts.treatmenttype",
+    "pk": 10,
+    "fields": {
+      "name": "تحریک الکتریکی",
+      "description": ""
+    }
+  },
+  {
+    "model": "accounts.treatmenttype",
+    "pk": 11,
+    "fields": {
+      "name": "بیوفیدبک",
+      "description": ""
+    }
+  },
+  {
+    "model": "accounts.treatmenttype",
+    "pk": 12,
+    "fields": {
+      "name": "روانشناسی",
+      "description": ""
+    }
+  },
+  {
+    "model": "accounts.treatmenttype",
+    "pk": 13,
+    "fields": {
+      "name": "روانپزشکی",
+      "description": ""
+    }
+  },
+  {
+    "model": "accounts.treatmenttype",
+    "pk": 14,
+    "fields": {
+      "name": "گفتار درمانی",
+      "description": ""
+    }
+  },
+  {
+    "model": "accounts.treatmenttype",
+    "pk": 15,
+    "fields": {
+      "name": "کاردرمانی",
+      "description": ""
+    }
+  },
+  {
+    "model": "accounts.doctortreatment",
+    "pk": 1,
+    "fields": {
+      "doctor": 3,
+      "treatment_type": 1
+    }
+  },
+  {
+    "model": "accounts.doctortreatment",
+    "pk": 2,
+    "fields": {
+      "doctor": 3,
+      "treatment_type": 2
+    }
+  },
+  {
+    "model": "accounts.doctortreatment",
+    "pk": 3,
+    "fields": {
+      "doctor": 3,
+      "treatment_type": 3
+    }
+  },
+  {
+    "model": "accounts.doctortreatment",
+    "pk": 4,
+    "fields": {
+      "doctor": 3,
+      "treatment_type": 4
+    }
+  },
+  {
+    "model": "accounts.doctortreatment",
+    "pk": 5,
+    "fields": {
+      "doctor": 3,
+      "treatment_type": 5
+    }
+  },
+  {
+    "model": "accounts.doctortreatment",
+    "pk": 6,
+    "fields": {
+      "doctor": 3,
+      "treatment_type": 6
+    }
+  }
+]
