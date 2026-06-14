@@ -1,0 +1,19 @@
+[run]
+source = .
+omit =
+    */migrations/*
+    */venv/*
+    */tests.py
+    conftest.py
+    manage.py
+    */wsgi.py
+
+[report]
+show_missing = True
+skip_covered = True
+exclude_lines =
+    pragma: no cover
+    def __str__
+    def __repr__
+    raise NotImplementedError
+    if __name__ == .__main__.:
