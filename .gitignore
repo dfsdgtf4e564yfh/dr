@@ -1,0 +1,36 @@
+# Environment
+.env
+backend/.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+backend/venv/
+.Python
+
+# Database
+backend/data/
+backend/backups/
+backend/db.sqlite3
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Django
+backend/static/
+backend/media/
+
+# Test / Coverage
+.coverage
+htmlcov/
+.pytest_cache/
+.coverage.*
