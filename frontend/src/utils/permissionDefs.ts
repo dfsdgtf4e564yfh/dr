@@ -1,0 +1,162 @@
+interface PermissionDef {
+  codename: string
+  name: string
+  group: string
+}
+
+const ALL_PAGES: PermissionDef[] = [
+  { codename: 'dashboard', name: 'داشبورد', group: 'عمومی' },
+  { codename: 'dashboard_income', name: 'نمایش درآمد در داشبورد', group: 'عمومی' },
+  { codename: 'special_access', name: 'کاربر ویژه', group: 'عمومی' },
+
+  // ===== بیماران =====
+  { codename: 'patients', name: 'مدیریت بیماران', group: 'بیماران' },
+  { codename: 'patient_create', name: 'ثبت بیمار جدید', group: 'بیماران' },
+  { codename: 'patient_view', name: 'مشاهده اطلاعات بیمار', group: 'بیماران' },
+  { codename: 'patient_edit', name: 'ویرایش اطلاعات بیمار', group: 'بیماران' },
+  { codename: 'patient_delete', name: 'حذف بیمار', group: 'بیماران' },
+  { codename: 'patient_info', name: 'اطلاعات فردی بیمار', group: 'بیماران' },
+  { codename: 'patient_appointments', name: 'نوبت‌های بیمار', group: 'بیماران' },
+  { codename: 'patient_records', name: 'پرونده پزشکی در بیمار', group: 'بیماران' },
+  { codename: 'patient_billing', name: 'صورتحساب در بیمار', group: 'بیماران' },
+  { codename: 'patient_tags', name: 'برچسب‌های بیمار', group: 'بیماران' },
+  { codename: 'patient_import', name: 'ورود اطلاعات از اکسل', group: 'بیماران' },
+  { codename: 'patient_export', name: 'خروجی اکسل بیماران', group: 'بیماران' },
+  { codename: 'patient_ocr', name: 'اسکن کارت ملی (OCR)', group: 'بیماران' },
+  { codename: 'patient_deleted_view', name: 'مشاهده بیماران حذف شده', group: 'بیماران' },
+  { codename: 'patient_restore', name: 'بازیابی بیمار حذف شده', group: 'بیماران' },
+  { codename: 'patient_permanent_delete', name: 'حذف دائمی بیمار', group: 'بیماران' },
+  { codename: 'patient_identity_view', name: 'مشاهده هویت بیمار', group: 'بیماران' },
+  { codename: 'patient_identity_edit', name: 'ویرایش هویت بیمار', group: 'بیماران' },
+  { codename: 'patient_identity_verify', name: 'تأیید هویت بیمار', group: 'بیماران' },
+
+  // ===== نوبت‌ها =====
+  { codename: 'appointments', name: 'نوبت‌ها', group: 'نوبت‌ها' },
+  { codename: 'appointment_create', name: 'ثبت نوبت جدید', group: 'نوبت‌ها' },
+  { codename: 'appointment_edit', name: 'ویرایش نوبت', group: 'نوبت‌ها' },
+  { codename: 'appointment_cancel', name: 'لغو نوبت', group: 'نوبت‌ها' },
+  { codename: 'appointment_complete', name: 'اتمام نوبت', group: 'نوبت‌ها' },
+  { codename: 'appointment_reschedule', name: 'تغییر زمان نوبت', group: 'نوبت‌ها' },
+  { codename: 'appointment_delete', name: 'حذف نوبت', group: 'نوبت‌ها' },
+  { codename: 'appointments_calendar', name: 'تقویم نوبت‌ها', group: 'نوبت‌ها' },
+  { codename: 'waiting_list', name: 'لیست انتظار', group: 'نوبت‌ها' },
+  { codename: 'appointments_report', name: 'گزارش نوبت‌ها', group: 'نوبت‌ها' },
+  { codename: 'appointment_sms_confirm', name: 'ارسال پیامک تأیید نوبت', group: 'نوبت‌ها' },
+  { codename: 'appointment_sms_reminder', name: 'ارسال پیامک یادآوری نوبت', group: 'نوبت‌ها' },
+  { codename: 'appointment_public_booking', name: 'رزرو عمومی نوبت', group: 'نوبت‌ها' },
+  { codename: 'appointment_online_import', name: 'ورود نوبت از سیستم خارجی', group: 'نوبت‌ها' },
+  { codename: 'appointment_export', name: 'خروجی اکسل نوبت‌ها', group: 'نوبت‌ها' },
+
+  // ===== پزشکی =====
+  { codename: 'medical_records', name: 'پرونده پزشکی', group: 'پزشکی' },
+  { codename: 'medical_record_create', name: 'ثبت پرونده پزشکی', group: 'پزشکی' },
+  { codename: 'medical_record_edit', name: 'ویرایش پرونده پزشکی', group: 'پزشکی' },
+  { codename: 'medical_record_delete', name: 'حذف پرونده پزشکی', group: 'پزشکی' },
+  { codename: 'medical_record_file_upload', name: 'بارگذاری فایل در پرونده', group: 'پزشکی' },
+  { codename: 'medical_record_voice', name: 'دیکته صوتی یادداشت', group: 'پزشکی' },
+  { codename: 'medical_record_templates', name: 'قالب‌های اختصاصی ویزیت', group: 'پزشکی' },
+  { codename: 'visit_templates', name: 'قالب‌های ویزیت', group: 'پزشکی' },
+  { codename: 'visit_templates_apply', name: 'اعمال قالب ویزیت', group: 'پزشکی' },
+  { codename: 'doctor_finance', name: 'حساب پزشکان', group: 'پزشکی' },
+  { codename: 'referral_letters', name: 'نامه‌های ارجاع', group: 'پزشکی' },
+  { codename: 'referral_letter_create', name: 'ایجاد نامه ارجاع', group: 'پزشکی' },
+  { codename: 'diagnosis_report', name: 'گزارش تشخیص', group: 'پزشکی' },
+  { codename: 'diagnosis_drugs', name: 'تشخیص و دارو', group: 'پزشکی' },
+  { codename: 'common_diagnosis_manage', name: 'مدیریت تشخیص‌های آماده', group: 'پزشکی' },
+  { codename: 'common_drug_manage', name: 'مدیریت داروهای آماده', group: 'پزشکی' },
+  { codename: 'common_treatment_manage', name: 'مدیریت طرح‌های درمان آماده', group: 'پزشکی' },
+  { codename: 'tms_forms', name: 'فرم TMS', group: 'پزشکی' },
+  { codename: 'tms_form_create', name: 'ثبت فرم TMS', group: 'پزشکی' },
+  { codename: 'tms_form_edit', name: 'ویرایش فرم TMS', group: 'پزشکی' },
+  { codename: 'dicom_viewer', name: 'نمایش تصاویر پزشکی (DICOM)', group: 'پزشکی' },
+  { codename: 'prescription_print', name: 'چاپ نسخه', group: 'پزشکی' },
+  { codename: 'medical_record_export', name: 'خروجی CSV پرونده', group: 'پزشکی' },
+
+  // ===== مالی =====
+  { codename: 'billing', name: 'صورتحساب', group: 'مالی' },
+  { codename: 'billing_create', name: 'ثبت صورت‌حساب', group: 'مالی' },
+  { codename: 'billing_edit', name: 'ویرایش صورت‌حساب', group: 'مالی' },
+  { codename: 'billing_delete', name: 'حذف صورت‌حساب', group: 'مالی' },
+  { codename: 'billing_payment', name: 'ثبت پرداخت', group: 'مالی' },
+  { codename: 'billing_report', name: 'گزارش مالی', group: 'مالی' },
+  { codename: 'billing_report_pdf', name: 'خروجی PDF گزارش مالی', group: 'مالی' },
+  { codename: 'billing_export', name: 'خروجی CSV صورت‌حساب', group: 'مالی' },
+  { codename: 'settlements', name: 'تسویه حساب', group: 'مالی' },
+  { codename: 'settlement_create', name: 'ثبت تسویه حساب', group: 'مالی' },
+  { codename: 'doctor_balance', name: 'مشاهده مانده حساب پزشکان', group: 'مالی' },
+  { codename: 'billing_periodic_report', name: 'صورتحساب دوره‌ای بیمار', group: 'مالی' },
+  { codename: 'periodic_billing_generate', name: 'ایجاد صورت‌حساب دوره‌ای', group: 'مالی' },
+  { codename: 'billing_receipt_print', name: 'چاپ رسید حرارتی', group: 'مالی' },
+  { codename: 'billing_online_payment', name: 'پرداخت اینترنتی', group: 'مالی' },
+  { codename: 'billing_sms_payment_notice', name: 'ارسال پیامک یادآوری پرداخت', group: 'مالی' },
+
+  // ===== پیامک و نوتیفیکیشن =====
+  { codename: 'notifications', name: 'اعلانات', group: 'پیامک و اعلانات' },
+  { codename: 'notification_create', name: 'ایجاد اعلان', group: 'پیامک و اعلانات' },
+  { codename: 'sms_templates', name: 'قالب‌های پیامک', group: 'پیامک و اعلانات' },
+  { codename: 'sms_templates_manage', name: 'مدیریت قالب‌های پیامک', group: 'پیامک و اعلانات' },
+  { codename: 'sms_history', name: 'تاریخچه پیامک‌ها', group: 'پیامک و اعلانات' },
+  { codename: 'sms_bulk', name: 'ارسال گروهی پیامک', group: 'پیامک و اعلانات' },
+  { codename: 'sms_settings', name: 'تنظیمات پیامک', group: 'پیامک و اعلانات' },
+  { codename: 'messenger_settings', name: 'تنظیمات پیام‌رسان‌ها', group: 'پیامک و اعلانات' },
+  { codename: 'sms_credit', name: 'مشاهده اعتبار پیامک', group: 'پیامک و اعلانات' },
+  { codename: 'messenger_bale', name: 'ارسال از طریق بله', group: 'پیامک و اعلانات' },
+
+  // ===== مدیریت سیستم =====
+  { codename: 'users', name: 'کاربران', group: 'مدیریت سیستم' },
+  { codename: 'user_create', name: 'ایجاد کاربر', group: 'مدیریت سیستم' },
+  { codename: 'user_edit', name: 'ویرایش کاربر', group: 'مدیریت سیستم' },
+  { codename: 'user_delete', name: 'حذف کاربر', group: 'مدیریت سیستم' },
+  { codename: 'roles_manage', name: 'مدیریت نقش‌ها', group: 'مدیریت سیستم' },
+  { codename: 'backup', name: 'پشتیبان', group: 'مدیریت سیستم' },
+  { codename: 'backup_create', name: 'ایجاد پشتیبان', group: 'مدیریت سیستم' },
+  { codename: 'backup_download', name: 'دانلود پشتیبان', group: 'مدیریت سیستم' },
+  { codename: 'backup_restore', name: 'بازیابی از پشتیبان', group: 'مدیریت سیستم' },
+  { codename: 'backup_delete', name: 'حذف پشتیبان', group: 'مدیریت سیستم' },
+  { codename: 'backup_schedule', name: 'تنظیم زمان پشتیبان خودکار', group: 'مدیریت سیستم' },
+  { codename: 'backup_cloud', name: 'پشتیبان‌گیری ابری', group: 'مدیریت سیستم' },
+  { codename: 'backup_email', name: 'ارسال پشتیبان از طریق ایمیل', group: 'مدیریت سیستم' },
+  { codename: 'settings', name: 'تنظیمات', group: 'مدیریت سیستم' },
+  { codename: 'clinic_settings', name: 'تنظیمات کلینیک', group: 'مدیریت سیستم' },
+  { codename: 'treatment_types', name: 'بخش‌های درمانی', group: 'مدیریت سیستم' },
+  { codename: 'activity_log', name: 'تاریخچه فعالیت‌ها', group: 'مدیریت سیستم' },
+  { codename: 'activity_log_export', name: 'خروجی تاریخچه فعالیت‌ها', group: 'مدیریت سیستم' },
+  { codename: 'deleted_items', name: 'موارد حذف شده', group: 'مدیریت سیستم' },
+  { codename: 'health_check', name: 'بررسی سلامت سیستم', group: 'مدیریت سیستم' },
+
+  // ===== پشتیبانی =====
+  { codename: 'support_inbox', name: 'صندوق پیام‌های پشتیبانی', group: 'پشتیبانی' },
+  { codename: 'support_message_create', name: 'ایجاد پیام پشتیبانی', group: 'پشتیبانی' },
+  { codename: 'support_message_reply', name: 'پاسخ به پیام پشتیبانی', group: 'پشتیبانی' },
+
+  // ===== پرتال بیمار =====
+  { codename: 'patient_portal', name: 'پرتال بیمار', group: 'پرتال' },
+  { codename: 'patient_online_booking', name: 'رزرو آنلاین نوبت', group: 'پرتال' },
+  { codename: 'patient_online_payment', name: 'پرداخت آنلاین', group: 'پرتال' },
+  { codename: 'patient_consent', name: 'رضایت‌نامه الکترونیکی', group: 'پرتال' },
+  { codename: 'patient_rating', name: 'ثبت نظر و امتیاز', group: 'پرتال' },
+
+  // ===== نمایش منوها =====
+  { codename: 'show_appointments_menu', name: 'نمایش منوی نوبت‌ها', group: 'نمایش منوها' },
+  { codename: 'show_medical_menu', name: 'نمایش منوی پزشکی', group: 'نمایش منوها' },
+  { codename: 'show_financial_menu', name: 'نمایش منوی مالی', group: 'نمایش منوها' },
+  { codename: 'show_reports_menu', name: 'نمایش منوی گزارش‌ها', group: 'نمایش منوها' },
+  { codename: 'show_clinic_menu', name: 'نمایش منوی کلینیک', group: 'نمایش منوها' },
+  { codename: 'show_system_menu', name: 'نمایش منوی مدیریت سیستم', group: 'نمایش منوها' },
+]
+
+const GROUP_LABELS: Record<string, string> = {
+  'عمومی': 'عمومی',
+  'بیماران': 'بیماران',
+  'نوبت‌ها': 'نوبت‌ها',
+  'پزشکی': 'پزشکی',
+  'مالی': 'مالی',
+  'پیامک و اعلانات': 'پیامک و اعلانات',
+  'مدیریت سیستم': 'مدیریت سیستم',
+  'پشتیبانی': 'پشتیبانی',
+  'پرتال': 'پرتال',
+  'نمایش منوها': 'نمایش منوها',
+}
+
+export default ALL_PAGES
+export { GROUP_LABELS }
