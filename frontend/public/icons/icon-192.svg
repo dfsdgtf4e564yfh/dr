@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" viewBox="0 0 192 192">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#1e40af"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#60a5fa"/>
+      <stop offset="100%" stop-color="#93c5fd"/>
+    </linearGradient>
+  </defs>
+  <rect width="192" height="192" rx="40" fill="url(#bg)"/>
+  <circle cx="96" cy="88" r="44" fill="none" stroke="url(#glow)" stroke-width="5"/>
+  <path d="M72 108 Q82 120 96 118 Q110 120 120 108" fill="none" stroke="url(#glow)" stroke-width="4" stroke-linecap="round"/>
+  <path d="M62 88 Q72 74 96 72 Q120 74 130 88" fill="none" stroke="url(#glow)" stroke-width="4" stroke-linecap="round"/>
+  <path d="M80 78 Q86 84 96 82 Q106 84 112 78" fill="none" stroke="url(#glow)" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M60 68 Q68 54 96 50 Q124 54 132 68" fill="none" stroke="url(#glow)" stroke-width="3" stroke-linecap="round" opacity="0.6"/>
+  <path d="M70 128 Q78 140 96 142 Q114 140 122 128" fill="none" stroke="url(#glow)" stroke-width="3" stroke-linecap="round" opacity="0.6"/>
+  <circle cx="96" cy="142" r="4" fill="url(#glow)"/>
+  <circle cx="96" cy="72" r="4" fill="url(#glow)"/>
+  <circle cx="78" cy="88" r="3" fill="url(#glow)" opacity="0.8"/>
+  <circle cx="114" cy="88" r="3" fill="url(#glow)" opacity="0.8"/>
+</svg>
